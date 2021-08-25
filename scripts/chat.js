@@ -28,7 +28,7 @@ class Chatroom {
             });
         });
     }
-    uodateName(username){
+    updateName(username){
         this.username = username;
     };
     updateRoom(room){
@@ -40,15 +40,20 @@ class Chatroom {
     };
 }
 
-const chatroom = new Chatroom('general', 'shaun');
+// const chatroom = new Chatroom('general', 'shaun');
 
-chatroom.getChats((data)=>{
-    console.log(data);
-})
+// chatroom.getChats((data)=>{
+//     console.log(data);
+// })
 
-setTimeout(()=>{
-    
-},3000);
+// setTimeout(()=>{
+//     chatroom.updateRoom('gaming');
+//     chatroom.updateName('youshi')
+//     chatroom.getChats((data)=>{
+//         console.log(data);
+//     });
+//     chatroom.AddChat('hello');
+// },3000);
 
 // chatroom.AddChat('Hello everyone')
 //     .then(() => console.log('chat added'))
