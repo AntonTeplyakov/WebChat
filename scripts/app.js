@@ -1,5 +1,6 @@
 const chatlist = document.querySelector('.chat-list')
 const newChatForm = document.querySelector('.new-chat');
+const newNameForm = document.querySelector('.new-name');
 
 newChatForm.addEventListener('submit',e =>{
     e.preventDefault();
@@ -8,6 +9,14 @@ newChatForm.addEventListener('submit',e =>{
     chatroom.AddChat(message)
     .then(()=>newChatForm.reset())
     .catch(err => console.log(err));
+});
+
+newNameForm.addEventListener('submit',e=>{
+    e.preventDefault();
+
+    const newName = newNameForm.name.value.trim();
+    chatroom.updateName(newName);
+    newNameForm.reset();
 });
 
 const chatUI = new ChatUI(chatlist);
